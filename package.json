@@ -12,7 +12,7 @@
     "run-client": "webpack --watch",
     "run-server": "node server",
     "server": "node server",
-    "start": "webpack && node server",
+    "start": "node server",
     "test": "jest --watchAll",
     "postinstall": "webpack && knex migrate:latest"
   },
