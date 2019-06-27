@@ -8,7 +8,7 @@ exports.seed = function (knex, Promise) {
         { brewery_id: 1, name: 'Export Gold', style: 'beer', abv: 4, decript: 'Almost indescribable, as in no descerning flavour whatsoever. Its like the undercover agent of beers. ', rating: 1, loc_available: '[1]', url: '' },
         { brewery_id: 1, name: 'Ranfurly', style: 'beer', abv: 4, decript: 'The under-appreciated canterbury cousin of speights. Guzzled in large quantities at Lincoln Uni student parties before acts of valor, such as running into fences, and cow tipping. ', rating: 1, loc_available: '[1]', url: '' },
         { brewery_id: 1, name: 'NZ Lager', style: 'beer', abv: 4, decript: 'Excellent when enjoyed in slabs of 18 or 24.', rating: 1, loc_available: '[1]', url: '' },
-        { brewery_id: 1, name: 'Rheineck', style: 'beer', abv: 4, decript: 'Cunningly passed of as a german beer, probably to annoy the germans. Brilliant.', rating: 1, loc_available: '[1]', url: '' },
+        { brewery_id: 1, name: 'Rheineck', style: 'beer', abv: 4, decript: 'Cunningly passed off as a german beer, probably to annoy the germans. Brilliant.', rating: 1, loc_available: '[1]', url: '' },
       ])
     })
 }
