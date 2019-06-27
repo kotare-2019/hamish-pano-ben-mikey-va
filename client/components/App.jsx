@@ -4,9 +4,19 @@ import Instagram from './instagram'
 import Facebook from './facebook'
 import Twitter from './twitter'
 
-const App = () => {
-  return (
-    <div>
+
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+
+    }
+  }
+  
+  render() {
+    return (
+      <React.Fragment>
         <div className="logo">  
         <ul className="social">
           <li><Instagram /></li>
@@ -19,8 +29,9 @@ const App = () => {
       <h2>Choose a beer to rate</h2>
       <Slider />
   
-    </div>
-  )
+      </React.Fragment>
+    )
+  }
 }
 
 export default App
