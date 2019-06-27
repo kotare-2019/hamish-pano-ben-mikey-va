@@ -7,13 +7,18 @@ import Twitter from './twitter'
 const App = () => {
   return (
     <div>
-    <h1>Un-Beerable</h1>
-    <h2>Choose a beer to rate</h2>
-    <h2>"for all the best bad beers"</h2>
-    <Slider />
-    <Instagram />
-    <Facebook />
-    <Twitter />
+        <div className="logo">  
+        <ul className="social">
+          <li><Instagram /></li>
+          <li><Facebook /></li>
+          <li><Twitter /></li>
+        </ul>
+      </div>
+      <h1>Un-Beerable</h1>
+      <h2>"for all the best bad beers"</h2>
+      <h2>Choose a beer to rate</h2>
+      <Slider />
+  
     </div>
   )
 }

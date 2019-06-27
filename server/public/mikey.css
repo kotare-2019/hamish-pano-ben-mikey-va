@@ -8,13 +8,14 @@
     padding: 20px;
     background: #2f302e ;
     user-select: none;
+    font-family: 'Special Elite', cursive;
+    color: #eae6e5;
   }
 
   h1 {
     margin: 50px;
     font-size: 5rem;
     color: #eae6e5;
-    font-family: 'Special Elite', cursive;
   }
   
   [type=radio] {
@@ -74,13 +75,28 @@
     transform: translate3d(30%,0,-200px);
   }
   
-  #slide1 { background-image: url('two.jpg');
+  #slide1 { background-image: url('/images/two.jpg');
   background-size: cover; }
-  #slide2 { background-image: url('three.jpg');
+  #slide2 { background-image: url('/images/three.jpg');
   background-size: cover; }
-  #slide3 { background-image: url('two.jpg');
+  #slide3 { background-image: url('/images/four.jpg');
   background-size: cover; }
-  #slide4 { background-image: url('three.jpg');
+  #slide4 { background-image: url('/images/one.jpg');
   background-size: cover; }
-  #slide5 { background-image: url('two.jpg');
+  #slide5 { background-image: url('/images/five.jpg');
   background-size: cover; }
+
+  .logo {
+    width: 100%;
+    display: flex; 
+    justify-content: flex-end;
+  }
+
+  .social {
+    display: flex;
+    width: 150px;
+    list-style: none;
+    justify-content: space-between;
+    margin-right: 200px;
+    font-size: 30px;
+  }
