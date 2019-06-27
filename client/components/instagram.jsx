@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-    <h1>Un-Beer-Able</h1>
+      <i class="fab fa-instagram"></i>
     </div>
   )
 }
