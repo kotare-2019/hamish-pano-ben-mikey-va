@@ -25,7 +25,7 @@ class App extends React.Component {
         </ul>
       </div>
       <h1>Un-Beerable</h1>
-      <h2>"for all the best bad beers"</h2>
+      <h2>"for all the best bad beers"</h2><br/>
       <h2>Choose a beer to rate</h2>
       <Slider />
   
