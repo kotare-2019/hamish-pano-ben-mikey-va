@@ -1,13 +1,37 @@
 import React from 'react'
 import Slider from './Slider'
+import Instagram from './instagram'
+import Facebook from './facebook'
+import Twitter from './twitter'
 
-const App = () => {
-  return (
-    <div>
-    <h1>Un-Beer-Able</h1>
-    <Slider />
-    </div>
-  )
+
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+
+    }
+  }
+  
+  render() {
+    return (
+      <React.Fragment>
+        <div className="logo">  
+        <ul className="social">
+          <li><Instagram /></li>
+          <li><Facebook /></li>
+          <li><Twitter /></li>
+        </ul>
+      </div>
+      <h1>Un-Beerable</h1>
+      <h2>"for all the best bad beers"</h2>
+      <h2>Choose a beer to rate</h2>
+      <Slider />
+  
+      </React.Fragment>
+    )
+  }
 }
 
 export default App
