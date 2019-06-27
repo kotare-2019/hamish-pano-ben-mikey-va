@@ -4,11 +4,12 @@ exports.up = (knex, Promise) => {
     table.increments('id').primary()
     table.integer('brewery_id')
     table.string('name')
-    table.integer('cat_id')
-    table.integer('style_id')
+    table.string('style')
     table.real('abv')
     table.string('decript')
     table.integer('rating')
+    table.string('loc_available')
+    table.string('url')
   })
 }
 

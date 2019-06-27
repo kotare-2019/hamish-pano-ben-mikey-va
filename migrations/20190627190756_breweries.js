@@ -5,7 +5,8 @@ exports.up = (knex, Promise) => {
     table.string('name')
     table.string('city')
     table.string('country')
-    table.string('website')
+    table.string('url')
+    table.string('lat_long_wsg84')
   })
 }
 
