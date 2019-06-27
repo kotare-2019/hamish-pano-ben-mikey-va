@@ -2,13 +2,13 @@ exports.seed = function (knex, Promise) {
   return knex('beers').del()
     .then(function () {
       return knex('beers').insert([
-        { name: 'Ambitious Aardvark', email: 'aardvark@example.org' },
-        { name: 'Bamboozled Baboon', email: 'baboon@example.org' },
-        { name: 'Curious Capybara', email: 'capybara@example.org' },
-        { name: 'Dilapidated Duck', email: 'duck@example.org' },
-        { name: 'Exuberant Elephant', email: 'elephant@example.org' },
-        { name: 'Fascinated Flying Fox', email: 'flying.fox@example.org' },
-        { name: 'Generous Gila Monster', email: 'gila.monster@example.org' },
+        { brewery_id: 1, name: 'Double Brown', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
+        { brewery_id: 1, name: 'Flame', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
+        { brewery_id: 1, name: 'Victoria Bitter', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
+        { brewery_id: 1, name: 'Export Gold', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
+        { brewery_id: 1, name: 'NZ Lager', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
+        { brewery_id: 1, name: 'Rheineck', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
+        { brewery_id: 1, name: 'Ranfurly', cat_id: 1, style_id: 1, abv: 4, decript: 'Slithers down the throat when drinken via a puncture in the side of the can', rating: 1 },
       ])
     })
 }
