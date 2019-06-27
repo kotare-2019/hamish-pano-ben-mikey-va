@@ -1,8 +1,12 @@
 import React from 'react'
+import Slider from 'Slider'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <div>
+    <h1>Un-Beer-Able</h1>
+    <Slider />
+    </div>
   )
 }
 
