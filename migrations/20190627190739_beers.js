@@ -5,7 +5,7 @@ exports.up = (knex, Promise) => {
     table.integer('brewery_id')
     table.string('name')
     table.string('style')
-    table.real('abv')
+    table.decimal('abv')
     table.string('decript')
     table.integer('rating')
     table.string('loc_available')
