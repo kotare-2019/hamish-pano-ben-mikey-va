@@ -27,7 +27,6 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <a href="#" onClick={this.handleClick}>Click this bitch</a>
         <div className="logo">
           <ul className="social">
             <li><Instagram /></li>
