@@ -6,7 +6,11 @@ export default function Slider(props) {
       <section id='slider'>
         {props.beers.map(beer => {
           console.log(beer)
-          return <input type="radio" name="slider" id={`s${beer.id}`} />
+          return <React.Fragment>
+            <a href={`${beer.id}`}>Click</a>
+
+            <input type="radio" name="slider" id={`s${beer.id}`} />
+          </React.Fragment>
         })}
         <label for="s1" id="slide1"></label>
         <label for="s2" id="slide2"></label>
@@ -14,6 +18,11 @@ export default function Slider(props) {
         <label for="s4" id="slide4"></label>
         <label for="s5" id="slide5"></label>
       </section>
+      <div className="beerdetails">
+        <p>Name: {props.beers[2] && props.beers[2].name}</p>
+        <p>Rating: {props.beers[2] && props.beers[2].rating}</p>
+        <p>Description: {props.beers[2] && props.beers[2].descript}</p>
+      </div>
     </React.Fragment >
   )
 }
