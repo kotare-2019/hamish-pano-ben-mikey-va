@@ -1,9 +1,10 @@
 import request from 'superagent'
 
 
-export function getBeers() {
+export function getBeers(callback) {
   request.get('http://localhost:3000/api/v1/beers/')
-    .then(res => {
-      console.log('getBeersAPI:', res.body)
+    .end((err, res) => {
+      console.log(res.body)
+      callback(res.body)
     })
 }
