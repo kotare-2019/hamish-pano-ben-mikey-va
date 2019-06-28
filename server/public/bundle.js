@@ -314,8 +314,9 @@ function (_Component) {
           },
           defaultCenter: this.map.center,
           defaultZoom: this.map.zoom
-        }, this.props.pubs.length && this.props.pubs.map(function (marker) {
+        }, this.props.pubs.length && this.props.pubs.map(function (marker, i) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Markers, {
+            key: i,
             style: {
               color: 'red'
             },

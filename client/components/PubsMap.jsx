@@ -27,7 +27,7 @@ class PubsMap extends Component {
           defaultCenter={this.map.center}
           defaultZoom={this.map.zoom}
         >
-          {this.props.pubs.length && this.props.pubs.map(marker => (<Markers style={{ color: 'red' }}
+          {this.props.pubs.length && this.props.pubs.map((marker, i) => (<Markers key={i} style={{ color: 'red' }}
             lat={JSON.parse(marker.lat_long_wsg84)[0]}
             lng={JSON.parse(marker.lat_long_wsg84)[1]}
             text="X"
