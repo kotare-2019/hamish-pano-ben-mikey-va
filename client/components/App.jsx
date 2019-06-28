@@ -39,6 +39,7 @@ class App extends React.Component {
         <h2>"for all the best bad beers"</h2>
         <h2>Choose a beer to rate</h2>
         <Slider />
+        <PubsMap />
       </React.Fragment>
     )
   }
