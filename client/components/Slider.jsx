@@ -1,19 +1,13 @@
 import React from 'react'
 
 export default function Slider(props) {
-  console.log(props)
   return (
     <React.Fragment>
       <section id='slider'>
         {props.beers.map(beer => {
-          return <input type="radio" name="slider" id={beer.id} />
+          console.log(beer)
+          return <input type="radio" name="slider" id={`s${beer.id}`} />
         })}
-        {/* <section id="slider">
-          <input type="radio" name="slider" id="s1" />
-          <input type="radio" name="slider" id="s2" />
-          <input type="radio" name="slider" id="s3" />
-          <input type="radio" name="slider" id="s4" />
-          <input type="radio" name="slider" id="s5" /> */}
         <label for="s1" id="slide1"></label>
         <label for="s2" id="slide2"></label>
         <label for="s3" id="slide3"></label>
