@@ -4,17 +4,17 @@ export default function Slider(props) {
   return (
     <React.Fragment>
       <section id='slider'>
-        {props.beers.map(beer => {
+        {props.beers.map((beer, i) => {
           console.log(beer)
           return <React.Fragment>
-            <input type="radio" name="slider" id={`s${beer.id}`} />
+            <input type="radio" name="slider" key={i} id={`s${beer.id}`} />
           </React.Fragment>
         })}
-        <label for="s1" id="slide1"></label>
-        <label for="s2" id="slide2"></label>
-        <label for="s3" id="slide3"></label>
-        <label for="s4" id="slide4"></label>
-        <label for="s5" id="slide5"></label>
+        <label htmlFor="s1" id="slide1"></label>
+        <label htmlFor="s2" id="slide2"></label>
+        <label htmlFor="s3" id="slide3"></label>
+        <label htmlFor="s4" id="slide4"></label>
+        <label htmlFor="s5" id="slide5"></label>
       </section>
       <div className="beerdetails">
         <p>Name: {props.beers[2] && props.beers[2].name}</p>
