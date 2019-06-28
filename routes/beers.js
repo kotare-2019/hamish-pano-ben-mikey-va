@@ -13,12 +13,14 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res)=>{
+router.get('/:id', (req, res) => {
   db.getBeerById(req.params.id)
-  .then(beer =>{
-    res.send(beer)
-  })
-  .catch(err => {
-    res.status(500).send(err.message)
-  })
+    .then(beer => {
+      res.send(beer)
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
 })
+
+module.exports = router
