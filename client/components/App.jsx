@@ -40,10 +40,6 @@ class App extends React.Component {
     getBeers(this.renderBeer)
   }
 
-  handleClick() {
-
-  }
-
   render() {
     return (
       <React.Fragment>
