@@ -81,7 +81,10 @@
   }
   
   #slide1 { background-image: url('/images/DoubleBrown.jpeg');
-  background-size: contain; }
+  background-size: contain; 
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; }
 
   #slide2 { background-image: url('/images/ExportGold.jpeg');
   background-size: contain;
@@ -128,4 +131,24 @@
 
   a:active {
     color: white;
+  }
+
+  .beerdetails {
+    width: 60%;
+    height: 400px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: auto;
+    text-align: justify;
+  }
+
+  p {
+    text-indent: 50px;
+    padding: 50px;
+    line-height: 1.5;
+    font-size: 24px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
   }
