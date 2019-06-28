@@ -139,4 +139,16 @@
     border: 2px solid;
     border-radius: 10px;
     margin: auto;
+    text-align: justify;
+  }
+
+  p {
+    text-indent: 50px;
+    padding: 50px;
+    line-height: 1.5;
+    font-size: 24px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
   }
