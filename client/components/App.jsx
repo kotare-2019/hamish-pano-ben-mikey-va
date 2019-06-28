@@ -3,6 +3,7 @@ import Slider from './Slider'
 import Instagram from './instagram'
 import Facebook from './facebook'
 import Twitter from './twitter'
+import BeerDetails from './BeerDetails'
 import { getBeers } from '../api/api'
 
 
@@ -38,6 +39,7 @@ class App extends React.Component {
       <h2>"for all the best bad beers"</h2><br/>
       <h2>Choose a beer to rate</h2>
       <Slider />
+      <BeerDetails />
       </React.Fragment>
     )
   }
