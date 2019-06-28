@@ -9,9 +9,10 @@ export function getBeers(callback) {
     })
 }
 
-export function getPubs() {
+export function getPubs(callback) {
   request.get('http://localhost:3000/api/v1/pubs/')
-    .then(res => {
-      console.log('getPubsAPI:', res.body)
+    .end((err, res) => {
+      console.log(res.body)
+      callback(res.body)
     })
 }

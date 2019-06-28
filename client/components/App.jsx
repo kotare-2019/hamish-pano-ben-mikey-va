@@ -3,7 +3,7 @@ import Slider from './Slider'
 import Instagram from './instagram'
 import Facebook from './facebook'
 import Twitter from './twitter'
-import { getBeers } from '../api/api'
+import { getBeers, getPubs } from '../api/api'
 import PubsMap from './PubsMap'
 
 
@@ -13,18 +13,28 @@ class App extends React.Component {
 
     this.state = {
       beers: [],
+      pubs: [],
     }
     this.getAllBeerData = this.getAllBeerData.bind(this)
+    this.getAllPubsData = this.getAllPubsData.bind(this)
     this.renderBeer = this.renderBeer.bind(this)
+    this.renderPubs = this.renderPubs.bind(this)
   }
 
   componentDidMount() {
     this.getAllBeerData()
+    this.getAllPubsData()
   }
 
   renderBeer(beers) {
     this.setState({
-      beers: beers || []
+      beers: beers || [],
+    })
+  }
+
+  renderPubs(pubs) {
+    this.setState({
+      pubs: pubs || [],
     })
   }
 
@@ -32,7 +42,12 @@ class App extends React.Component {
     getBeers(this.renderBeer)
   }
 
+  getAllPubsData() {
+    getPubs(this.renderPubs)
+  }
+
   render() {
+    console.log(this.state)
     return (
       <React.Fragment>
         <div className="logo">
@@ -46,6 +61,7 @@ class App extends React.Component {
         <h2>"for all the best bad beers"</h2>
         <h2>Choose a beer to rate</h2>
         <Slider beers={this.state.beers} />
+        <PubsMap pubs={this.state.pubs} />
       </React.Fragment>
     )
   }

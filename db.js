@@ -13,7 +13,8 @@ function getBeerById(id, db = connection) {
 }
 
 function getAllPubs(db = connection) {
-  return db('beers_location').select()
+  console.log('db get pubs')
+  return db('beer_locations').select()
 }
 
 module.exports = {
