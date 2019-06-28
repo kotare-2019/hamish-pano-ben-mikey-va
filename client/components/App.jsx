@@ -11,17 +11,24 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-
+      beers: [],
     }
     this.getAllBeerData = this.getAllBeerData.bind(this)
+    this.renderBeer = this.renderBeer.bind(this)
   }
 
   componentDidMount() {
     this.getAllBeerData()
   }
 
+  renderBeer(beers) {
+    this.setState({
+      beers: beers || []
+    })
+  }
+
   getAllBeerData() {
-    getBeers()
+    getBeers(this.renderBeer)
   }
 
   render() {
@@ -37,7 +44,7 @@ class App extends React.Component {
         <h1>Un-Beerable</h1>
         <h2>"for all the best bad beers"</h2>
         <h2>Choose a beer to rate</h2>
-        <Slider />
+        <Slider beers={this.state.beers} />
       </React.Fragment>
     )
   }
