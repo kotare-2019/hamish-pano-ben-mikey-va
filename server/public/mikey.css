@@ -74,16 +74,32 @@
     transform: translate3d(30%,0,-200px);
   }
   
-  #slide1 { background-image: url('/images/two.jpg');
-  background-size: cover; }
-  #slide2 { background-image: url('/images/three.jpg');
-  background-size: cover; }
-  #slide3 { background-image: url('/images/four.jpg');
-  background-size: cover; }
-  #slide4 { background-image: url('/images/one.jpg');
-  background-size: cover; }
-  #slide5 { background-image: url('/images/five.jpg');
-  background-size: cover; }
+  #slide1 { background-image: url('/images/DoubleBrown.jpeg');
+  background-size: contain; }
+
+  #slide2 { background-image: url('/images/ExportGold.jpeg');
+  background-size: contain;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+  #slide3 { background-image: url('/images/Flame.jpeg');
+  background-size: contain; 
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+  #slide4 { background-image: url('/images/NZLager.jpeg');
+  background-size: contain; 
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+  #slide5 { background-image: url('/images/VictoriaBitter.jpeg');
+  background-size: contain; 
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; }
 
   .logo {
     width: 100%;
