@@ -90,25 +90,31 @@
 /*!***************************!*\
   !*** ./client/api/api.js ***!
   \***************************/
-/*! exports provided: getBeers, getPubs */
+/*! exports provided: getBeers, getSingleBeer, getPubs */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBeers", function() { return getBeers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSingleBeer", function() { return getSingleBeer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPubs", function() { return getPubs; });
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
 
 function getBeers(callback) {
   superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/beers/').end(function (err, res) {
+    // console.log(res.body)
+    callback(res.body);
+  });
+}
+function getSingleBeer(id, callback) {
+  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/beers/' + id).end(function (err, res) {
     console.log(res.body);
     callback(res.body);
   });
 }
 function getPubs(callback) {
   superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/pubs/').end(function (err, res) {
-    console.log(res.body);
     callback(res.body);
   });
 }
@@ -132,6 +138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _twitter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./twitter */ "./client/components/twitter.jsx");
 /* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api/api */ "./client/api/api.js");
 /* harmony import */ var _PubsMap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PubsMap */ "./client/components/PubsMap.jsx");
+/* harmony import */ var _BeerDetails__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./BeerDetails */ "./client/components/BeerDetails.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -158,6 +165,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var App =
 /*#__PURE__*/
 function (_React$Component) {
@@ -171,12 +179,14 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
       beers: [],
-      pubs: []
+      pubs: [],
+      activeBeer: null
     };
     _this.getAllBeerData = _this.getAllBeerData.bind(_assertThisInitialized(_this));
     _this.getAllPubsData = _this.getAllPubsData.bind(_assertThisInitialized(_this));
     _this.renderBeer = _this.renderBeer.bind(_assertThisInitialized(_this));
     _this.renderPubs = _this.renderPubs.bind(_assertThisInitialized(_this));
+    _this.showBeer = _this.showBeer.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -201,6 +211,13 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "showBeer",
+    value: function showBeer(beer) {
+      this.setState({
+        activeBeer: beer
+      });
+    }
+  }, {
     key: "getAllBeerData",
     value: function getAllBeerData() {
       Object(_api_api__WEBPACK_IMPORTED_MODULE_5__["getBeers"])(this.renderBeer);
@@ -210,6 +227,9 @@ function (_React$Component) {
     value: function getAllPubsData() {
       Object(_api_api__WEBPACK_IMPORTED_MODULE_5__["getPubs"])(this.renderPubs);
     }
+  }, {
+    key: "handleClick",
+    value: function handleClick() {}
   }, {
     key: "render",
     value: function render() {
@@ -230,6 +250,27 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./client/components/BeerDetails.jsx":
+/*!*******************************************!*\
+  !*** ./client/components/BeerDetails.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return beerDetails; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function beerDetails(props) {
+  // const { beer, isVisible.hideDetails } = props
+  // const classes = 'widget-details' + (isVisible ? 'visible' : 'hidden')
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+}
 
 /***/ }),
 
@@ -292,7 +333,7 @@ function (_Component) {
         lat: -41.2962181,
         lng: 174.7823331
       },
-      zoom: 13
+      zoom: 14
     };
     return _this;
   }
@@ -305,6 +346,7 @@ function (_Component) {
           style: {
             height: '40vh',
             width: '60%',
+            marginTop: 50,
             marginLeft: 'auto',
             marginRight: 'auto'
           }
@@ -317,12 +359,9 @@ function (_Component) {
         }, this.props.pubs.length && this.props.pubs.map(function (marker, i) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Markers, {
             key: i,
-            style: {
-              color: 'red'
-            },
             lat: JSON.parse(marker.lat_long_wsg84)[0],
-            lng: JSON.parse(marker.lat_long_wsg84)[1],
-            text: "X"
+            lng: JSON.parse(marker.lat_long_wsg84)[1] // text="X"
+
           });
         })))
       );
@@ -350,15 +389,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function Slider(props) {
-  console.log(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     id: "slider"
   }, props.beers.map(function (beer) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    console.log(beer);
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "".concat(beer.id)
+    }, "Click"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "radio",
       name: "slider",
-      id: beer.id
-    });
+      id: "s".concat(beer.id)
+    }));
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     "for": "s1",
     id: "slide1"
@@ -374,7 +415,9 @@ function Slider(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     "for": "s5",
     id: "slide5"
-  })));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "beerdetails"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Name: ", props.beers[2] && props.beers[2].name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Rating: ", props.beers[2] && props.beers[2].rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Description: ", props.beers[2] && props.beers[2].descript)));
 }
 
 /***/ }),

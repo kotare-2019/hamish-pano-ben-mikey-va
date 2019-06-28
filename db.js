@@ -13,7 +13,6 @@ function getBeerById(id, db = connection) {
 }
 
 function getAllPubs(db = connection) {
-  console.log('db get pubs')
   return db('beer_locations').select()
 }
 

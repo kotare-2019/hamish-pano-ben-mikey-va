@@ -6,7 +6,6 @@ import Twitter from './twitter'
 import { getBeers, getPubs } from '../api/api'
 import PubsMap from './PubsMap'
 import BeerDetails from './BeerDetails'
-import { getBeers } from '../api/api'
 
 
 class App extends React.Component {

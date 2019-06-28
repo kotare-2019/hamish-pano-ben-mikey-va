@@ -27,10 +27,10 @@ class BreweriesMap extends Component {
           defaultCenter={this.map.center}
           defaultZoom={this.map.zoom}
         >
-          {this.props.breweries.length && this.props.breweries.map(marker => (<Markers
-            lat={marker.lat_long_wsg84[0]}
-            lng={marker.lat_long_wsg84[1]}
-            text="X"
+          {this.props.pubs.length && this.props.pubs.map(marker => (<Markers style={{ color: red }}
+            lat={JSON.parse(marker.lat_long_wsg84)[0]}
+            lng={JSON.parse(marker.lat_long_wsg84)[1]}
+            text="PUB!!!"
           />))}
         </GoogleMapReact>
       </div>

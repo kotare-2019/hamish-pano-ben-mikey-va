@@ -20,7 +20,6 @@ export function getSingleBeer(id, callback) {
 export function getPubs(callback) {
   request.get('http://localhost:3000/api/v1/pubs/')
     .end((err, res) => {
-      console.log(res.body)
       callback(res.body)
     })
 }

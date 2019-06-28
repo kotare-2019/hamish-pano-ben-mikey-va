@@ -13,7 +13,7 @@ class PubsMap extends Component {
         lat: -41.2962181,
         lng: 174.7823331
       },
-      zoom: 13
+      zoom: 14
     }
   }
 
@@ -21,16 +21,16 @@ class PubsMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '40vh', width: '60%', marginLeft: 'auto', marginRight: 'auto' }}>
+      <div style={{ height: '40vh', width: '60%', marginTop: 50, marginLeft: 'auto', marginRight: 'auto' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyAvfWB1UvnfnIYv85YHcVaA7cvE4jwtzJk' }}
           defaultCenter={this.map.center}
           defaultZoom={this.map.zoom}
         >
-          {this.props.pubs.length && this.props.pubs.map((marker, i) => (<Markers key={i} style={{ color: 'red' }}
+          {this.props.pubs.length && this.props.pubs.map((marker, i) => (<Markers key={i}
             lat={JSON.parse(marker.lat_long_wsg84)[0]}
             lng={JSON.parse(marker.lat_long_wsg84)[1]}
-            text="X"
+          // text="X"
           />))}
         </GoogleMapReact>
       </div>
