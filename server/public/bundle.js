@@ -204,9 +204,6 @@ function (_React$Component) {
       Object(_api_api__WEBPACK_IMPORTED_MODULE_6__["getBeers"])(this.renderBeer);
     }
   }, {
-    key: "handleClick",
-    value: function handleClick() {}
-  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
