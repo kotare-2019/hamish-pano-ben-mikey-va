@@ -7,8 +7,6 @@ export default function Slider(props) {
         {props.beers.map(beer => {
           console.log(beer)
           return <React.Fragment>
-            <a href={`${beer.id}`}>Click</a>
-
             <input type="radio" name="slider" id={`s${beer.id}`} />
           </React.Fragment>
         })}
