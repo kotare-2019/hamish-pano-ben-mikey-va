@@ -13,16 +13,20 @@ class App extends React.Component {
     this.state = {
 
     }
+    this.getAllBeerData = this.getAllBeerData.bind(this)
   }
 
-  handleClick() {
+  componentDidMount() {
+    this.getAllBeerData()
+  }
+
+  getAllBeerData() {
     getBeers()
   }
 
   render() {
     return (
       <React.Fragment>
-        <a href="#" onClick={this.handleClick}>Click this bitch</a>
 
         <div className="logo">
           <ul className="social">
