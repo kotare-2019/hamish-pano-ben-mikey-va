@@ -90,24 +90,36 @@
 /*!***************************!*\
   !*** ./client/api/api.js ***!
   \***************************/
+<<<<<<< HEAD
 /*! exports provided: getBeers, getSingleBeer, getPubs */
+=======
+/*! exports provided: getBeers, getSingleBeer */
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBeers", function() { return getBeers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSingleBeer", function() { return getSingleBeer; });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPubs", function() { return getPubs; });
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
 
 function getBeers(callback) {
+<<<<<<< HEAD
   superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/beers/').end(function (err, res) {
+=======
+  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/beers/').end(function (err, res) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     // console.log(res.body)
     callback(res.body);
   });
 }
 function getSingleBeer(id, callback) {
+<<<<<<< HEAD
   superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/beers/' + id).end(function (err, res) {
     console.log(res.body);
     callback(res.body);
@@ -115,6 +127,10 @@ function getSingleBeer(id, callback) {
 }
 function getPubs(callback) {
   superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/pubs/').end(function (err, res) {
+=======
+  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/beers/' + id).end(function (err, res) {
+    // console.log(res.body)
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     callback(res.body);
   });
 }
@@ -136,9 +152,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _instagram__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./instagram */ "./client/components/instagram.jsx");
 /* harmony import */ var _facebook__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./facebook */ "./client/components/facebook.jsx");
 /* harmony import */ var _twitter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./twitter */ "./client/components/twitter.jsx");
+<<<<<<< HEAD
 /* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api/api */ "./client/api/api.js");
 /* harmony import */ var _PubsMap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PubsMap */ "./client/components/PubsMap.jsx");
 /* harmony import */ var _BeerDetails__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./BeerDetails */ "./client/components/BeerDetails.jsx");
+=======
+/* harmony import */ var _BeerDetails__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./BeerDetails */ "./client/components/BeerDetails.jsx");
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../api/api */ "./client/api/api.js");
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -165,7 +186,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 var App =
 /*#__PURE__*/
 function (_React$Component) {
@@ -179,6 +203,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
       beers: [],
+<<<<<<< HEAD
       pubs: [],
       activeBeer: null
     };
@@ -186,6 +211,12 @@ function (_React$Component) {
     _this.getAllPubsData = _this.getAllPubsData.bind(_assertThisInitialized(_this));
     _this.renderBeer = _this.renderBeer.bind(_assertThisInitialized(_this));
     _this.renderPubs = _this.renderPubs.bind(_assertThisInitialized(_this));
+=======
+      activeBeer: null
+    };
+    _this.getAllBeerData = _this.getAllBeerData.bind(_assertThisInitialized(_this));
+    _this.renderBeer = _this.renderBeer.bind(_assertThisInitialized(_this));
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     _this.showBeer = _this.showBeer.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -194,7 +225,10 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.getAllBeerData();
+<<<<<<< HEAD
       this.getAllPubsData();
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     }
   }, {
     key: "renderBeer",
@@ -204,6 +238,7 @@ function (_React$Component) {
       });
     }
   }, {
+<<<<<<< HEAD
     key: "renderPubs",
     value: function renderPubs(pubs) {
       this.setState({
@@ -211,6 +246,8 @@ function (_React$Component) {
       });
     }
   }, {
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     key: "showBeer",
     value: function showBeer(beer) {
       this.setState({
@@ -220,6 +257,7 @@ function (_React$Component) {
   }, {
     key: "getAllBeerData",
     value: function getAllBeerData() {
+<<<<<<< HEAD
       Object(_api_api__WEBPACK_IMPORTED_MODULE_5__["getBeers"])(this.renderBeer);
     }
   }, {
@@ -234,14 +272,24 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       console.log(this.state);
+=======
+      Object(_api_api__WEBPACK_IMPORTED_MODULE_6__["getBeers"])(this.renderBeer);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "logo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "social"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_instagram__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_facebook__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_twitter__WEBPACK_IMPORTED_MODULE_4__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Un-Beerable"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\"for all the best bad beers\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Choose a beer to rate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Slider__WEBPACK_IMPORTED_MODULE_1__["default"], {
         beers: this.state.beers
+<<<<<<< HEAD
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PubsMap__WEBPACK_IMPORTED_MODULE_6__["default"], {
         pubs: this.state.pubs
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       }));
     }
   }]);
@@ -274,21 +322,35 @@ function beerDetails(props) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./client/components/PubsMap.jsx":
 /*!***************************************!*\
   !*** ./client/components/PubsMap.jsx ***!
   \***************************************/
+=======
+/***/ "./client/components/Slider.jsx":
+/*!**************************************!*\
+  !*** ./client/components/Slider.jsx ***!
+  \**************************************/
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "./node_modules/google-map-react/lib/index.js");
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _server_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../server/config */ "./server/config.js");
 /* harmony import */ var _server_config__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_server_config__WEBPACK_IMPORTED_MODULE_2__);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Slider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/api */ "./client/api/api.js");
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -299,14 +361,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+<<<<<<< HEAD
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+=======
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+<<<<<<< HEAD
 
 
 
@@ -334,10 +404,52 @@ function (_Component) {
         lng: 174.7823331
       },
       zoom: 14
+=======
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var NZLager = {
+  abv: 4,
+  brewery_id: 2,
+  descript: "The under-appreciated canterbury cousin of speights. Drunk in vigourous quantities at Lincoln Uni student parties before acts of valor, such as running into fences, cow tipping, and running into cows. The lords of Valhalla would approve.",
+  id: 5,
+  loc_available: "[1]",
+  name: "Ranfurly",
+  rating: 1,
+  style: "beer",
+  url: "images/Ranfurly.jpeg"
+};
+
+var Slider =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Slider, _React$Component);
+
+  function Slider(props) {
+    var _this;
+
+    _classCallCheck(this, Slider);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Slider).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "update", function (e) {
+      var id = e.target.id[1];
+      Object(_api_api__WEBPACK_IMPORTED_MODULE_1__["getSingleBeer"])(id, function (beer) {
+        return _this.setState({
+          beer: beer
+        });
+      });
+    });
+
+    _this.state = {
+      beer: NZLager
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     };
     return _this;
   }
 
+<<<<<<< HEAD
   _createClass(PubsMap, [{
     key: "render",
     value: function render() {
@@ -419,6 +531,49 @@ function Slider(props) {
     className: "beerdetails"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Name: ", props.beers[2] && props.beers[2].name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Rating: ", props.beers[2] && props.beers[2].rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Description: ", props.beers[2] && props.beers[2].descript)));
 }
+=======
+  _createClass(Slider, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        id: "slider"
+      }, this.props.beers.map(function (beer, i) {
+        // console.log(beer)
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          onChange: _this2.update,
+          type: "radio",
+          name: "slider",
+          key: i,
+          id: "s".concat(beer.id)
+        }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s1",
+        id: "slide1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s2",
+        id: "slide2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s3",
+        id: "slide3"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s4",
+        id: "slide4"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s5",
+        id: "slide5"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "beerdetails"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Name: ", this.state.beer.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Rating: ", this.state.beer.rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Description: ", this.state.beer.descript)));
+    }
+  }]);
+
+  return Slider;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
 /***/ }),
 
@@ -439,7 +594,11 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+<<<<<<< HEAD
     "class": "fab fa-facebook-square"
+=======
+    className: "fab fa-facebook-square"
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   })));
 };
 
@@ -464,7 +623,11 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+<<<<<<< HEAD
     "class": "fab fa-instagram"
+=======
+    className: "fab fa-instagram"
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   })));
 };
 
@@ -489,7 +652,11 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+<<<<<<< HEAD
     "class": "fab fa-twitter"
+=======
+    className: "fab fa-twitter"
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   })));
 };
 
@@ -520,6 +687,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/@mapbox/point-geometry/index.js":
 /*!******************************************************!*\
   !*** ./node_modules/@mapbox/point-geometry/index.js ***!
@@ -844,6 +1012,8 @@ Point.convert = function (a) {
 
 /***/ }),
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /***/ "./node_modules/component-emitter/index.js":
 /*!*************************************************!*\
   !*** ./node_modules/component-emitter/index.js ***!
@@ -964,6 +1134,7 @@ Emitter.prototype.removeEventListener = function(event, fn){
       break;
     }
   }
+<<<<<<< HEAD
 
   // Remove event specific arrays for event types that no
   // one is subscribed for to avoid memory leak.
@@ -971,6 +1142,8 @@ Emitter.prototype.removeEventListener = function(event, fn){
     delete this._callbacks['$' + event];
   }
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   return this;
 };
 
@@ -984,6 +1157,7 @@ Emitter.prototype.removeEventListener = function(event, fn){
 
 Emitter.prototype.emit = function(event){
   this._callbacks = this._callbacks || {};
+<<<<<<< HEAD
 
   var args = new Array(arguments.length - 1)
     , callbacks = this._callbacks['$' + event];
@@ -992,6 +1166,11 @@ Emitter.prototype.emit = function(event){
     args[i - 1] = arguments[i];
   }
 
+=======
+  var args = [].slice.call(arguments, 1)
+    , callbacks = this._callbacks['$' + event];
+
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   if (callbacks) {
     callbacks = callbacks.slice(0);
     for (var i = 0, len = callbacks.length; i < len; ++i) {
@@ -1030,6 +1209,7 @@ Emitter.prototype.hasListeners = function(event){
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/google-map-react/lib/google_heatmap.js":
 /*!*************************************************************!*\
   !*** ./node_modules/google-map-react/lib/google_heatmap.js ***!
@@ -1073,10 +1253,17 @@ var optionsHeatmap = exports.optionsHeatmap = function optionsHeatmap(instance, 
 /*!*********************************************************!*\
   !*** ./node_modules/google-map-react/lib/google_map.js ***!
   \*********************************************************/
+=======
+/***/ "./node_modules/object-assign/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/object-assign/index.js ***!
+  \*********************************************/
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
 
 exports.__esModule = true;
@@ -4304,6 +4491,152 @@ if (true) {
  * @private
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+=======
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/checkPropTypes.js":
+/*!***************************************************!*\
+  !*** ./node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var printWarning = function() {};
+
+if (true) {
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+  var loggedTypeFailures = {};
+  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */
+function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   if (true) {
     for (var typeSpecName in typeSpecs) {
       if (has(typeSpecs, typeSpecName)) {
@@ -4322,6 +4655,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
             err.name = 'Invariant Violation';
             throw err;
           }
+<<<<<<< HEAD
           error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
         } catch (ex) {
           error = ex;
@@ -4993,6 +5327,50 @@ if (true) {
   var throwOnDirectAccess = true;
   module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
 } else {}
+=======
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        if (error && !(error instanceof Error)) {
+          printWarning(
+            (componentName || 'React class') + ': type specification of ' +
+            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
+            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
+            'You may have forgotten to pass an argument to the type checker ' +
+            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
+            'shape all require an argument).'
+          );
+        }
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          printWarning(
+            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
+          );
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */
+checkPropTypes.resetWarningCache = function() {
+  if (true) {
+    loggedTypeFailures = {};
+  }
+}
+
+module.exports = checkPropTypes;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
 
 /***/ }),
@@ -26356,6 +26734,7 @@ if (false) {} else {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -26612,6 +26991,8 @@ if (false) {} else {
 
 /***/ }),
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -29723,6 +30104,7 @@ if (false) {} else {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/scriptjs/dist/script.js":
 /*!**********************************************!*\
   !*** ./node_modules/scriptjs/dist/script.js ***!
@@ -29862,6 +30244,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /***/ "./node_modules/superagent/lib/agent-base.js":
 /*!***************************************************!*\
   !*** ./node_modules/superagent/lib/agent-base.js ***!
@@ -29872,6 +30256,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 "use strict";
 
 
+<<<<<<< HEAD
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -29880,10 +30265,13 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 function Agent() {
   this._defaults = [];
 }
 
+<<<<<<< HEAD
 ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'auth', 'withCredentials', 'sortQuery', 'retry', 'ok', 'redirects', 'timeout', 'buffer', 'serialize', 'parse', 'ca', 'key', 'pfx', 'cert'].forEach(function (fn) {
   // Default setting for all requests from this agent
   Agent.prototype[fn] = function () {
@@ -29894,6 +30282,14 @@ function Agent() {
     this._defaults.push({
       fn: fn,
       args: args
+=======
+['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'auth', 'withCredentials', 'sortQuery', 'retry', 'ok', 'redirects', 'timeout', 'buffer', 'serialize', 'parse', 'ca', 'key', 'pfx', 'cert'].forEach(fn => {
+  // Default setting for all requests from this agent
+  Agent.prototype[fn] = function (...args) {
+    this._defaults.push({
+      fn,
+      args
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     });
 
     return this;
@@ -29901,8 +30297,13 @@ function Agent() {
 });
 
 Agent.prototype._setDefaults = function (req) {
+<<<<<<< HEAD
   this._defaults.forEach(function (def) {
     req[def.fn].apply(req, _toConsumableArray(def.args));
+=======
+  this._defaults.forEach(def => {
+    req[def.fn](...def.args);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   });
 };
 
@@ -29920,12 +30321,19 @@ module.exports = Agent;
 "use strict";
 
 
+<<<<<<< HEAD
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /**
  * Root reference for iframes.
  */
 var root;
+=======
+/**
+ * Root reference for iframes.
+ */
+let root;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
 if (typeof window !== 'undefined') {
   // Browser window
@@ -29939,6 +30347,7 @@ if (typeof window !== 'undefined') {
   root = self;
 }
 
+<<<<<<< HEAD
 var Emitter = __webpack_require__(/*! component-emitter */ "./node_modules/component-emitter/index.js");
 
 var RequestBase = __webpack_require__(/*! ./request-base */ "./node_modules/superagent/lib/request-base.js");
@@ -29948,6 +30357,17 @@ var isObject = __webpack_require__(/*! ./is-object */ "./node_modules/superagent
 var ResponseBase = __webpack_require__(/*! ./response-base */ "./node_modules/superagent/lib/response-base.js");
 
 var Agent = __webpack_require__(/*! ./agent-base */ "./node_modules/superagent/lib/agent-base.js");
+=======
+const Emitter = __webpack_require__(/*! component-emitter */ "./node_modules/component-emitter/index.js");
+
+const RequestBase = __webpack_require__(/*! ./request-base */ "./node_modules/superagent/lib/request-base.js");
+
+const isObject = __webpack_require__(/*! ./is-object */ "./node_modules/superagent/lib/is-object.js");
+
+const ResponseBase = __webpack_require__(/*! ./response-base */ "./node_modules/superagent/lib/response-base.js");
+
+const Agent = __webpack_require__(/*! ./agent-base */ "./node_modules/superagent/lib/agent-base.js");
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Noop.
  */
@@ -29974,13 +30394,21 @@ module.exports = function (method, url) {
 };
 
 exports = module.exports;
+<<<<<<< HEAD
 var request = exports;
+=======
+const request = exports;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 exports.Request = Request;
 /**
  * Determine XHR.
  */
 
+<<<<<<< HEAD
 request.getXHR = function () {
+=======
+request.getXHR = () => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   if (root.XMLHttpRequest && (!root.location || root.location.protocol !== 'file:' || !root.ActiveXObject)) {
     return new XMLHttpRequest();
   }
@@ -30012,11 +30440,15 @@ request.getXHR = function () {
  */
 
 
+<<<<<<< HEAD
 var trim = ''.trim ? function (s) {
   return s.trim();
 } : function (s) {
   return s.replace(/(^\s*|\s*$)/g, '');
 };
+=======
+const trim = ''.trim ? s => s.trim() : s => s.replace(/(^\s*|\s*$)/g, '');
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Serialize the given `obj`.
  *
@@ -30027,9 +30459,15 @@ var trim = ''.trim ? function (s) {
 
 function serialize(obj) {
   if (!isObject(obj)) return obj;
+<<<<<<< HEAD
   var pairs = [];
 
   for (var key in obj) {
+=======
+  const pairs = [];
+
+  for (const key in obj) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (Object.prototype.hasOwnProperty.call(obj, key)) pushEncodedKeyValuePair(pairs, key, obj[key]);
   }
 
@@ -30048,12 +30486,21 @@ function serialize(obj) {
 function pushEncodedKeyValuePair(pairs, key, val) {
   if (val !== null) {
     if (Array.isArray(val)) {
+<<<<<<< HEAD
       val.forEach(function (v) {
         pushEncodedKeyValuePair(pairs, key, v);
       });
     } else if (isObject(val)) {
       for (var subkey in val) {
         if (Object.prototype.hasOwnProperty.call(val, subkey)) pushEncodedKeyValuePair(pairs, "".concat(key, "[").concat(subkey, "]"), val[subkey]);
+=======
+      val.forEach(v => {
+        pushEncodedKeyValuePair(pairs, key, v);
+      });
+    } else if (isObject(val)) {
+      for (const subkey in val) {
+        if (Object.prototype.hasOwnProperty.call(val, subkey)) pushEncodedKeyValuePair(pairs, `${key}[${subkey}]`, val[subkey]);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       }
     } else {
       pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(val));
@@ -30077,12 +30524,21 @@ request.serializeObject = serialize;
  */
 
 function parseString(str) {
+<<<<<<< HEAD
   var obj = {};
   var pairs = str.split('&');
   var pair;
   var pos;
 
   for (var i = 0, len = pairs.length; i < len; ++i) {
+=======
+  const obj = {};
+  const pairs = str.split('&');
+  let pair;
+  let pos;
+
+  for (let i = 0, len = pairs.length; i < len; ++i) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     pair = pairs[i];
     pos = pair.indexOf('=');
 
@@ -30152,6 +30608,7 @@ request.parse = {
  */
 
 function parseHeader(str) {
+<<<<<<< HEAD
   var lines = str.split(/\r?\n/);
   var fields = {};
   var index;
@@ -30160,6 +30617,16 @@ function parseHeader(str) {
   var val;
 
   for (var i = 0, len = lines.length; i < len; ++i) {
+=======
+  const lines = str.split(/\r?\n/);
+  const fields = {};
+  let index;
+  let line;
+  let field;
+  let val;
+
+  for (let i = 0, len = lines.length; i < len; ++i) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     line = lines[i];
     index = line.indexOf(':');
 
@@ -30242,7 +30709,11 @@ function Response(req) {
 
   this.text = this.req.method !== 'HEAD' && (this.xhr.responseType === '' || this.xhr.responseType === 'text') || typeof this.xhr.responseType === 'undefined' ? this.xhr.responseText : null;
   this.statusText = this.req.xhr.statusText;
+<<<<<<< HEAD
   var status = this.xhr.status; // handle IE9 bug: http://stackoverflow.com/questions/10046972/msie-returns-status-code-of-1223-for-ajax-request
+=======
+  let status = this.xhr.status; // handle IE9 bug: http://stackoverflow.com/questions/10046972/msie-returns-status-code-of-1223-for-ajax-request
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (status === 1223) {
     status = 204;
@@ -30280,7 +30751,11 @@ ResponseBase(Response.prototype);
  */
 
 Response.prototype._parseBody = function (str) {
+<<<<<<< HEAD
   var parse = request.parse[this.type];
+=======
+  let parse = request.parse[this.type];
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (this.req._parser) {
     return this.req._parser(this, str);
@@ -30301,11 +30776,19 @@ Response.prototype._parseBody = function (str) {
 
 
 Response.prototype.toError = function () {
+<<<<<<< HEAD
   var req = this.req;
   var method = req.method;
   var url = req.url;
   var msg = "cannot ".concat(method, " ").concat(url, " (").concat(this.status, ")");
   var err = new Error(msg);
+=======
+  const req = this.req;
+  const method = req.method;
+  const url = req.url;
+  const msg = `cannot ${method} ${url} (${this.status})`;
+  const err = new Error(msg);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   err.status = this.status;
   err.method = method;
   err.url = url;
@@ -30326,7 +30809,11 @@ request.Response = Response;
  */
 
 function Request(method, url) {
+<<<<<<< HEAD
   var self = this;
+=======
+  const self = this;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   this._query = this._query || [];
   this.method = method;
   this.url = url;
@@ -30334,9 +30821,15 @@ function Request(method, url) {
 
   this._header = {}; // coerces header names to lowercase
 
+<<<<<<< HEAD
   this.on('end', function () {
     var err = null;
     var res = null;
+=======
+  this.on('end', () => {
+    let err = null;
+    let res = null;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
     try {
       res = new Response(self);
@@ -30360,7 +30853,11 @@ function Request(method, url) {
     }
 
     self.emit('response', res);
+<<<<<<< HEAD
     var new_err;
+=======
+    let new_err;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
     try {
       if (!self._isResponseOK(res)) {
@@ -30455,7 +30952,11 @@ Request.prototype.accept = function (type) {
 Request.prototype.auth = function (user, pass, options) {
   if (arguments.length === 1) pass = '';
 
+<<<<<<< HEAD
   if (_typeof(pass) === 'object' && pass !== null) {
+=======
+  if (typeof pass === 'object' && pass !== null) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     // pass is optional and can be replaced with options
     options = pass;
     pass = '';
@@ -30467,7 +30968,11 @@ Request.prototype.auth = function (user, pass, options) {
     };
   }
 
+<<<<<<< HEAD
   var encoder = function encoder(string) {
+=======
+  const encoder = string => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (typeof btoa === 'function') {
       return btoa(string);
     }
@@ -30549,7 +31054,11 @@ Request.prototype.callback = function (err, res) {
     return this._retry();
   }
 
+<<<<<<< HEAD
   var fn = this._callback;
+=======
+  const fn = this._callback;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   this.clearTimeout();
 
   if (err) {
@@ -30567,7 +31076,11 @@ Request.prototype.callback = function (err, res) {
 
 
 Request.prototype.crossDomainError = function () {
+<<<<<<< HEAD
   var err = new Error('Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.');
+=======
+  const err = new Error('Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.');
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   err.crossDomain = true;
   err.status = this.status;
   err.method = this.method;
@@ -30584,7 +31097,11 @@ Request.prototype.agent = function () {
 Request.prototype.buffer = Request.prototype.ca;
 Request.prototype.ca = Request.prototype.agent; // This throws, because it can't send/receive data as expected
 
+<<<<<<< HEAD
 Request.prototype.write = function () {
+=======
+Request.prototype.write = () => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   throw new Error('Streaming is not supported in browser version of superagent');
 };
 
@@ -30600,7 +31117,11 @@ Request.prototype.pipe = Request.prototype.write;
 
 Request.prototype._isHost = function (obj) {
   // Native objects stringify to [object File], [object Blob], [object FormData], etc.
+<<<<<<< HEAD
   return obj && _typeof(obj) === 'object' && !Array.isArray(obj) && Object.prototype.toString.call(obj) !== '[object Object]';
+=======
+  return obj && typeof obj === 'object' && !Array.isArray(obj) && Object.prototype.toString.call(obj) !== '[object Object]';
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 };
 /**
  * Initiate request, invoking callback `fn(res)`
@@ -30627,10 +31148,17 @@ Request.prototype.end = function (fn) {
 };
 
 Request.prototype._setUploadTimeout = function () {
+<<<<<<< HEAD
   var self = this; // upload timeout it's wokrs only if deadline timeout is off
 
   if (this._uploadTimeout && !this._uploadTimeoutTimer) {
     this._uploadTimeoutTimer = setTimeout(function () {
+=======
+  const self = this; // upload timeout it's wokrs only if deadline timeout is off
+
+  if (this._uploadTimeout && !this._uploadTimeoutTimer) {
+    this._uploadTimeoutTimer = setTimeout(() => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       self._timeoutError('Upload timeout of ', self._uploadTimeout, 'ETIMEDOUT');
     }, this._uploadTimeout);
   }
@@ -30639,16 +31167,28 @@ Request.prototype._setUploadTimeout = function () {
 
 Request.prototype._end = function () {
   if (this._aborted) return this.callback(new Error('The request has been aborted even before .end() was called'));
+<<<<<<< HEAD
   var self = this;
   this.xhr = request.getXHR();
   var xhr = this.xhr;
   var data = this._formData || this._data;
+=======
+  const self = this;
+  this.xhr = request.getXHR();
+  const xhr = this.xhr;
+  let data = this._formData || this._data;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   this._setTimeouts(); // state change
 
 
+<<<<<<< HEAD
   xhr.onreadystatechange = function () {
     var readyState = xhr.readyState;
+=======
+  xhr.onreadystatechange = () => {
+    const readyState = xhr.readyState;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
     if (readyState >= 2 && self._responseTimeoutTimer) {
       clearTimeout(self._responseTimeoutTimer);
@@ -30660,7 +31200,11 @@ Request.prototype._end = function () {
     // result in the error "Could not complete the operation due to error c00c023f"
 
 
+<<<<<<< HEAD
     var status;
+=======
+    let status;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
     try {
       status = xhr.status;
@@ -30677,7 +31221,11 @@ Request.prototype._end = function () {
   }; // progress
 
 
+<<<<<<< HEAD
   var handleProgress = function handleProgress(direction, e) {
+=======
+  const handleProgress = (direction, e) => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (e.total > 0) {
       e.percent = e.loaded / e.total * 100;
 
@@ -30724,6 +31272,7 @@ Request.prototype._end = function () {
 
   if (!this._formData && this.method !== 'GET' && this.method !== 'HEAD' && typeof data !== 'string' && !this._isHost(data)) {
     // serialize stuff
+<<<<<<< HEAD
     var contentType = this._header['content-type'];
 
     var _serialize = this._serializer || request.serialize[contentType ? contentType.split(';')[0] : ''];
@@ -30737,6 +31286,20 @@ Request.prototype._end = function () {
 
 
   for (var field in this.header) {
+=======
+    const contentType = this._header['content-type'];
+    let serialize = this._serializer || request.serialize[contentType ? contentType.split(';')[0] : ''];
+
+    if (!serialize && isJSON(contentType)) {
+      serialize = request.serialize['application/json'];
+    }
+
+    if (serialize) data = serialize(data);
+  } // set header fields
+
+
+  for (const field in this.header) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (this.header[field] === null) continue;
     if (Object.prototype.hasOwnProperty.call(this.header, field)) xhr.setRequestHeader(field, this.header[field]);
   }
@@ -30752,6 +31315,7 @@ Request.prototype._end = function () {
   xhr.send(typeof data === 'undefined' ? null : data);
 };
 
+<<<<<<< HEAD
 request.agent = function () {
   return new Agent();
 };
@@ -30759,6 +31323,13 @@ request.agent = function () {
 ['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE'].forEach(function (method) {
   Agent.prototype[method.toLowerCase()] = function (url, fn) {
     var req = new request.Request(method, url);
+=======
+request.agent = () => new Agent();
+
+['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE'].forEach(method => {
+  Agent.prototype[method.toLowerCase()] = function (url, fn) {
+    const req = new request.Request(method, url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
     this._setDefaults(req);
 
@@ -30780,8 +31351,13 @@ Agent.prototype.del = Agent.prototype.delete;
  * @api public
  */
 
+<<<<<<< HEAD
 request.get = function (url, data, fn) {
   var req = request('GET', url);
+=======
+request.get = (url, data, fn) => {
+  const req = request('GET', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30803,8 +31379,13 @@ request.get = function (url, data, fn) {
  */
 
 
+<<<<<<< HEAD
 request.head = function (url, data, fn) {
   var req = request('HEAD', url);
+=======
+request.head = (url, data, fn) => {
+  const req = request('HEAD', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30826,8 +31407,13 @@ request.head = function (url, data, fn) {
  */
 
 
+<<<<<<< HEAD
 request.options = function (url, data, fn) {
   var req = request('OPTIONS', url);
+=======
+request.options = (url, data, fn) => {
+  const req = request('OPTIONS', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30850,7 +31436,11 @@ request.options = function (url, data, fn) {
 
 
 function del(url, data, fn) {
+<<<<<<< HEAD
   var req = request('DELETE', url);
+=======
+  const req = request('DELETE', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30874,8 +31464,13 @@ request.delete = del;
  * @api public
  */
 
+<<<<<<< HEAD
 request.patch = function (url, data, fn) {
   var req = request('PATCH', url);
+=======
+request.patch = (url, data, fn) => {
+  const req = request('PATCH', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30897,8 +31492,13 @@ request.patch = function (url, data, fn) {
  */
 
 
+<<<<<<< HEAD
 request.post = function (url, data, fn) {
   var req = request('POST', url);
+=======
+request.post = (url, data, fn) => {
+  const req = request('POST', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30920,8 +31520,13 @@ request.post = function (url, data, fn) {
  */
 
 
+<<<<<<< HEAD
 request.put = function (url, data, fn) {
   var req = request('PUT', url);
+=======
+request.put = (url, data, fn) => {
+  const req = request('PUT', url);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (typeof data === 'function') {
     fn = data;
@@ -30945,8 +31550,11 @@ request.put = function (url, data, fn) {
 "use strict";
 
 
+<<<<<<< HEAD
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Check if `obj` is an object.
  *
@@ -30955,7 +31563,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
  * @api private
  */
 function isObject(obj) {
+<<<<<<< HEAD
   return obj !== null && _typeof(obj) === 'object';
+=======
+  return obj !== null && typeof obj === 'object';
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 }
 
 module.exports = isObject;
@@ -30972,12 +31584,19 @@ module.exports = isObject;
 "use strict";
 
 
+<<<<<<< HEAD
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /**
  * Module of mixed-in functions shared between node and client code
  */
 var isObject = __webpack_require__(/*! ./is-object */ "./node_modules/superagent/lib/is-object.js");
+=======
+/**
+ * Module of mixed-in functions shared between node and client code
+ */
+const isObject = __webpack_require__(/*! ./is-object */ "./node_modules/superagent/lib/is-object.js");
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Expose `RequestBase`.
  */
@@ -31003,7 +31622,11 @@ function RequestBase(obj) {
 
 
 function mixin(obj) {
+<<<<<<< HEAD
   for (var key in RequestBase.prototype) {
+=======
+  for (const key in RequestBase.prototype) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (Object.prototype.hasOwnProperty.call(RequestBase.prototype, key)) obj[key] = RequestBase.prototype[key];
   }
 
@@ -31093,14 +31716,22 @@ RequestBase.prototype.serialize = function (fn) {
 
 
 RequestBase.prototype.timeout = function (options) {
+<<<<<<< HEAD
   if (!options || _typeof(options) !== 'object') {
+=======
+  if (!options || typeof options !== 'object') {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     this._timeout = options;
     this._responseTimeout = 0;
     this._uploadTimeout = 0;
     return this;
   }
 
+<<<<<<< HEAD
   for (var option in options) {
+=======
+  for (const option in options) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (Object.prototype.hasOwnProperty.call(options, option)) {
       switch (option) {
         case 'deadline':
@@ -31145,7 +31776,11 @@ RequestBase.prototype.retry = function (count, fn) {
   return this;
 };
 
+<<<<<<< HEAD
 var ERROR_CODES = ['ECONNRESET', 'ETIMEDOUT', 'EADDRINFO', 'ESOCKETTIMEDOUT'];
+=======
+const ERROR_CODES = ['ECONNRESET', 'ETIMEDOUT', 'EADDRINFO', 'ESOCKETTIMEDOUT'];
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Determine if a request should be retried.
  * (Borrowed from segmentio/superagent-retry)
@@ -31162,7 +31797,11 @@ RequestBase.prototype._shouldRetry = function (err, res) {
 
   if (this._retryCallback) {
     try {
+<<<<<<< HEAD
       var override = this._retryCallback(err, res);
+=======
+      const override = this._retryCallback(err, res);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
       if (override === true) return true;
       if (override === false) return false; // undefined falls back to defaults
@@ -31212,15 +31851,21 @@ RequestBase.prototype._retry = function () {
 
 
 RequestBase.prototype.then = function (resolve, reject) {
+<<<<<<< HEAD
   var _this = this;
 
   if (!this._fullfilledPromise) {
     var self = this;
+=======
+  if (!this._fullfilledPromise) {
+    const self = this;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
     if (this._endCalled) {
       console.warn('Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises');
     }
 
+<<<<<<< HEAD
     this._fullfilledPromise = new Promise(function (resolve, reject) {
       self.on('abort', function () {
         var err = new Error('Aborted');
@@ -31231,6 +31876,18 @@ RequestBase.prototype.then = function (resolve, reject) {
         reject(err);
       });
       self.end(function (err, res) {
+=======
+    this._fullfilledPromise = new Promise((resolve, reject) => {
+      self.on('abort', () => {
+        const err = new Error('Aborted');
+        err.code = 'ABORTED';
+        err.status = this.status;
+        err.method = this.method;
+        err.url = this.url;
+        reject(err);
+      });
+      self.end((err, res) => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
         if (err) reject(err);else resolve(res);
       });
     });
@@ -31319,7 +31976,11 @@ RequestBase.prototype.getHeader = RequestBase.prototype.get;
 
 RequestBase.prototype.set = function (field, val) {
   if (isObject(field)) {
+<<<<<<< HEAD
     for (var key in field) {
+=======
+    for (const key in field) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       if (Object.prototype.hasOwnProperty.call(field, key)) this.set(key, field[key]);
     }
 
@@ -31382,7 +32043,11 @@ RequestBase.prototype.field = function (name, val) {
   }
 
   if (isObject(name)) {
+<<<<<<< HEAD
     for (var key in name) {
+=======
+    for (const key in name) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       if (Object.prototype.hasOwnProperty.call(name, key)) this.field(key, name[key]);
     }
 
@@ -31390,7 +32055,11 @@ RequestBase.prototype.field = function (name, val) {
   }
 
   if (Array.isArray(val)) {
+<<<<<<< HEAD
     for (var i in val) {
+=======
+    for (const i in val) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       if (Object.prototype.hasOwnProperty.call(val, i)) this.field(name, val[i]);
     }
 
@@ -31436,7 +32105,11 @@ RequestBase.prototype.abort = function () {
 RequestBase.prototype._auth = function (user, pass, options, base64Encoder) {
   switch (options.type) {
     case 'basic':
+<<<<<<< HEAD
       this.set('Authorization', "Basic ".concat(base64Encoder("".concat(user, ":").concat(pass))));
+=======
+      this.set('Authorization', `Basic ${base64Encoder(`${user}:${pass}`)}`);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       break;
 
     case 'auto':
@@ -31446,7 +32119,11 @@ RequestBase.prototype._auth = function (user, pass, options, base64Encoder) {
 
     case 'bearer':
       // usage would be .auth(accessToken, { type: 'bearer' })
+<<<<<<< HEAD
       this.set('Authorization', "Bearer ".concat(user));
+=======
+      this.set('Authorization', `Bearer ${user}`);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       break;
 
     default:
@@ -31564,8 +32241,13 @@ RequestBase.prototype.toJSON = function () {
 
 
 RequestBase.prototype.send = function (data) {
+<<<<<<< HEAD
   var isObj = isObject(data);
   var type = this._header['content-type'];
+=======
+  const isObj = isObject(data);
+  let type = this._header['content-type'];
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (this._formData) {
     throw new Error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
@@ -31583,7 +32265,11 @@ RequestBase.prototype.send = function (data) {
 
 
   if (isObj && isObject(this._data)) {
+<<<<<<< HEAD
     for (var key in data) {
+=======
+    for (const key in data) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       if (Object.prototype.hasOwnProperty.call(data, key)) this._data[key] = data[key];
     }
   } else if (typeof data === 'string') {
@@ -31592,7 +32278,11 @@ RequestBase.prototype.send = function (data) {
     type = this._header['content-type'];
 
     if (type === 'application/x-www-form-urlencoded') {
+<<<<<<< HEAD
       this._data = this._data ? "".concat(this._data, "&").concat(data) : data;
+=======
+      this._data = this._data ? `${this._data}&${data}` : data;
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     } else {
       this._data = (this._data || '') + data;
     }
@@ -31650,7 +32340,11 @@ RequestBase.prototype.sortQuery = function (sort) {
 
 
 RequestBase.prototype._finalizeQueryString = function () {
+<<<<<<< HEAD
   var query = this._query.join('&');
+=======
+  const query = this._query.join('&');
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   if (query) {
     this.url += (this.url.indexOf('?') >= 0 ? '&' : '?') + query;
@@ -31659,10 +32353,17 @@ RequestBase.prototype._finalizeQueryString = function () {
   this._query.length = 0; // Makes the call idempotent
 
   if (this._sort) {
+<<<<<<< HEAD
     var index = this.url.indexOf('?');
 
     if (index >= 0) {
       var queryArr = this.url.substring(index + 1).split('&');
+=======
+    const index = this.url.indexOf('?');
+
+    if (index >= 0) {
+      const queryArr = this.url.substring(index + 1).split('&');
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
       if (typeof this._sort === 'function') {
         queryArr.sort(this._sort);
@@ -31676,7 +32377,11 @@ RequestBase.prototype._finalizeQueryString = function () {
 }; // For backwards compat only
 
 
+<<<<<<< HEAD
 RequestBase.prototype._appendQueryString = function () {
+=======
+RequestBase.prototype._appendQueryString = () => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   console.warn('Unsupported');
 };
 /**
@@ -31691,7 +32396,11 @@ RequestBase.prototype._timeoutError = function (reason, timeout, errno) {
     return;
   }
 
+<<<<<<< HEAD
   var err = new Error("".concat(reason + timeout, "ms exceeded"));
+=======
+  const err = new Error(`${reason + timeout}ms exceeded`);
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   err.timeout = timeout;
   err.code = 'ECONNABORTED';
   err.errno = errno;
@@ -31701,17 +32410,28 @@ RequestBase.prototype._timeoutError = function (reason, timeout, errno) {
 };
 
 RequestBase.prototype._setTimeouts = function () {
+<<<<<<< HEAD
   var self = this; // deadline
 
   if (this._timeout && !this._timer) {
     this._timer = setTimeout(function () {
+=======
+  const self = this; // deadline
+
+  if (this._timeout && !this._timer) {
+    this._timer = setTimeout(() => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       self._timeoutError('Timeout of ', self._timeout, 'ETIME');
     }, this._timeout);
   } // response timeout
 
 
   if (this._responseTimeout && !this._responseTimeoutTimer) {
+<<<<<<< HEAD
     this._responseTimeoutTimer = setTimeout(function () {
+=======
+    this._responseTimeoutTimer = setTimeout(() => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
       self._timeoutError('Response timeout of ', self._responseTimeout, 'ETIMEDOUT');
     }, this._responseTimeout);
   }
@@ -31732,7 +32452,11 @@ RequestBase.prototype._setTimeouts = function () {
 /**
  * Module dependencies.
  */
+<<<<<<< HEAD
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/superagent/lib/utils.js");
+=======
+const utils = __webpack_require__(/*! ./utils */ "./node_modules/superagent/lib/utils.js");
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Expose `ResponseBase`.
  */
@@ -31758,7 +32482,11 @@ function ResponseBase(obj) {
 
 
 function mixin(obj) {
+<<<<<<< HEAD
   for (var key in ResponseBase.prototype) {
+=======
+  for (const key in ResponseBase.prototype) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (Object.prototype.hasOwnProperty.call(ResponseBase.prototype, key)) obj[key] = ResponseBase.prototype[key];
   }
 
@@ -31793,12 +32521,21 @@ ResponseBase.prototype._setHeaderProperties = function (header) {
   // TODO: moar!
   // TODO: make this a util
   // content-type
+<<<<<<< HEAD
   var ct = header['content-type'] || '';
   this.type = utils.type(ct); // params
 
   var params = utils.params(ct);
 
   for (var key in params) {
+=======
+  const ct = header['content-type'] || '';
+  this.type = utils.type(ct); // params
+
+  const params = utils.params(ct);
+
+  for (const key in params) {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
     if (Object.prototype.hasOwnProperty.call(params, key)) this[key] = params[key];
   }
 
@@ -31834,7 +32571,11 @@ ResponseBase.prototype._setHeaderProperties = function (header) {
 
 
 ResponseBase.prototype._setStatusProperties = function (status) {
+<<<<<<< HEAD
   var type = status / 100 | 0; // status / class
+=======
+  const type = status / 100 | 0; // status / class
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
   this.statusCode = status;
   this.status = this.statusCode;
@@ -31877,9 +32618,13 @@ ResponseBase.prototype._setStatusProperties = function (status) {
  * @return {String}
  * @api private
  */
+<<<<<<< HEAD
 exports.type = function (str) {
   return str.split(/ *; */).shift();
 };
+=======
+exports.type = str => str.split(/ *; */).shift();
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Return header field parameters.
  *
@@ -31889,6 +32634,7 @@ exports.type = function (str) {
  */
 
 
+<<<<<<< HEAD
 exports.params = function (str) {
   return str.split(/ *; */).reduce(function (obj, str) {
     var parts = str.split(/ *= */);
@@ -31898,6 +32644,15 @@ exports.params = function (str) {
     return obj;
   }, {});
 };
+=======
+exports.params = str => str.split(/ *; */).reduce((obj, str) => {
+  const parts = str.split(/ *= */);
+  const key = parts.shift();
+  const val = parts.shift();
+  if (key && val) obj[key] = val;
+  return obj;
+}, {});
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Parse Link header fields.
  *
@@ -31907,6 +32662,7 @@ exports.params = function (str) {
  */
 
 
+<<<<<<< HEAD
 exports.parseLinks = function (str) {
   return str.split(/ *, */).reduce(function (obj, str) {
     var parts = str.split(/ *; */);
@@ -31916,6 +32672,15 @@ exports.parseLinks = function (str) {
     return obj;
   }, {});
 };
+=======
+exports.parseLinks = str => str.split(/ *, */).reduce((obj, str) => {
+  const parts = str.split(/ *; */);
+  const url = parts[0].slice(1, -1);
+  const rel = parts[1].split(/ *= */)[1].slice(1, -1);
+  obj[rel] = url;
+  return obj;
+}, {});
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 /**
  * Strip content related fields from `header`.
  *
@@ -31925,7 +32690,11 @@ exports.parseLinks = function (str) {
  */
 
 
+<<<<<<< HEAD
 exports.cleanHeader = function (header, changesOrigin) {
+=======
+exports.cleanHeader = (header, changesOrigin) => {
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   delete header['content-type'];
   delete header['content-length'];
   delete header['transfer-encoding'];
@@ -31968,6 +32737,7 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+<<<<<<< HEAD
 
 
 /***/ }),
@@ -31983,6 +32753,9 @@ var key = {
   key: 'AIzaSyAvfWB1UvnfnIYv85YHcVaA7cvE4jwtzJk' //import {key} from './config'
 
 };
+=======
+
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
 
 /***/ })
 

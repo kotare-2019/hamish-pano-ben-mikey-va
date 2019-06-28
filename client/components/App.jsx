@@ -51,6 +51,7 @@ class App extends React.Component {
     getBeers(this.renderBeer)
   }
 
+<<<<<<< HEAD
   getAllPubsData() {
     getPubs(this.renderPubs)
   }
@@ -58,6 +59,8 @@ class App extends React.Component {
 
   }
 
+=======
+>>>>>>> c0c001813142e7bd8ab444c50d78017b8930c85e
   render() {
     console.log(this.state)
     return (

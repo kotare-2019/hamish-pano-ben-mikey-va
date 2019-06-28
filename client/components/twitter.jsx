@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i className="fab fa-twitter"></i></a>
     </div>
   )
 }
