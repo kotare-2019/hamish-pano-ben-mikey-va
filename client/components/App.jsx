@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-
+      beers: []
     }
     this.getAllBeerData = this.getAllBeerData.bind(this)
   }
