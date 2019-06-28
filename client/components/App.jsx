@@ -5,6 +5,8 @@ import Facebook from './facebook'
 import Twitter from './twitter'
 import { getBeers, getPubs } from '../api/api'
 import PubsMap from './PubsMap'
+import BeerDetails from './BeerDetails'
+import { getBeers } from '../api/api'
 
 
 class App extends React.Component {
@@ -14,11 +16,13 @@ class App extends React.Component {
     this.state = {
       beers: [],
       pubs: [],
+      activeBeer: null,
     }
     this.getAllBeerData = this.getAllBeerData.bind(this)
     this.getAllPubsData = this.getAllPubsData.bind(this)
     this.renderBeer = this.renderBeer.bind(this)
     this.renderPubs = this.renderPubs.bind(this)
+    this.showBeer = this.showBeer.bind(this)
   }
 
   componentDidMount() {
@@ -38,12 +42,21 @@ class App extends React.Component {
     })
   }
 
+  showBeer(beer) {
+    this.setState({
+      activeBeer: beer
+    })
+  }
+
   getAllBeerData() {
     getBeers(this.renderBeer)
   }
 
   getAllPubsData() {
     getPubs(this.renderPubs)
+  }
+  handleClick() {
+
   }
 
   render() {
