@@ -115,3 +115,11 @@
     margin-right: 200px;
     font-size: 30px;
   }
+
+  a:hover {
+    color: white;
+  }
+
+  a:active {
+    color: white;
+  }
