@@ -13,29 +13,31 @@ class App extends React.Component {
     this.state = {
 
     }
+    this.getAllBeerData = this.getAllBeerData.bind(this)
   }
 
-  handleClick() {
+  componentDidMount() {
+    this.getAllBeerData()
+  }
+
+  getAllBeerData() {
     getBeers()
   }
 
   render() {
     return (
       <React.Fragment>
-        <a href="#" onClick={this.handleClick}>Click this bitch</a>
-
-        <div className="logo">
-          <ul className="social">
-            <li><Instagram /></li>
-            <li><Facebook /></li>
-            <li><Twitter /></li>
-          </ul>
-        </div>
-        <h1>Un-Beerable</h1>
-        <h2>"for all the best bad beers"</h2>
-        <h2>Choose a beer to rate</h2>
-        <Slider />
-
+        <div className="logo">  
+        <ul className="social">
+          <li><Instagram /></li>
+          <li><Facebook /></li>
+          <li><Twitter /></li>
+        </ul>
+      </div>
+      <h1>Un-Beerable</h1>
+      <h2>"for all the best bad beers"</h2><br/>
+      <h2>Choose a beer to rate</h2>
+      <Slider />
       </React.Fragment>
     )
   }
