@@ -7,3 +7,10 @@ export function getBeers() {
       console.log('getBeersAPI:', res.body)
     })
 }
+
+export function getPubs() {
+  request.get('http://localhost:3000/api/v1/pubs/')
+    .then(res => {
+      console.log('getPubsAPI:', res.body)
+    })
+}

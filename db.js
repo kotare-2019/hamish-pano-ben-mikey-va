@@ -12,7 +12,12 @@ function getBeerById(id, db = connection) {
   return db('beers').where('id', id).select().first()
 }
 
+function getAllPubs(db = connection) {
+  return db('beers_location').select()
+}
+
 module.exports = {
   getAllBeers,
   getBeerById,
+  getAllPubs
 }
