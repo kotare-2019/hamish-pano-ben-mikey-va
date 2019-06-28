@@ -305,7 +305,6 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "update", function (e) {
       var id = e.target.id[1];
-      console.log('woo!', id);
       Object(_api_api__WEBPACK_IMPORTED_MODULE_1__["getSingleBeer"])(id, function (beer) {
         return _this.setState({
           beer: beer

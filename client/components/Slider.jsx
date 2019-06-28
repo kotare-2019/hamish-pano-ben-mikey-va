@@ -24,7 +24,6 @@ export default class Slider extends React.Component {
 
   update = (e) => {
     const id = e.target.id[1]
-    console.log('woo!', id)
     getSingleBeer(id, beer => this.setState({ beer }))
   }
 
