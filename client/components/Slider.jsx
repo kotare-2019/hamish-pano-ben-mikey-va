@@ -7,7 +7,7 @@ export default function Slider(props) {
         {props.beers.map((beer, i) => {
           // console.log(beer)
           return <React.Fragment>
-            <input type="radio" name="slider" key={i} id={`slide${beer.id - 21}`} />
+            <input type="radio" name="slider" key={i} id={`slide${beer.id}`} />
           </React.Fragment>
         })}
         <label htmlFor="s1" id="slide1"></label>
