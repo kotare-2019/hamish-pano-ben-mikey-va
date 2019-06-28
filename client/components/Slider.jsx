@@ -5,7 +5,7 @@ export default function Slider(props) {
     <React.Fragment>
       <section id='slider'>
         {props.beers.map((beer, i) => {
-          console.log(beer)
+          // console.log(beer)
           return <React.Fragment>
             <input type="radio" name="slider" key={i} id={`s${beer.id}`} />
           </React.Fragment>
