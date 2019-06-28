@@ -12,7 +12,7 @@ export function getBeers(callback) {
 export function getSingleBeer(id, callback) {
   request.get('/api/v1/beers/' + id)
     .end((err, res) => {
-      console.log(res.body)
+      // console.log(res.body)
       callback(res.body)
     })
 }

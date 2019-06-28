@@ -101,14 +101,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
 
 function getBeers(callback) {
-  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/beers/').end(function (err, res) {
+  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/beers/').end(function (err, res) {
     // console.log(res.body)
     callback(res.body);
   });
 }
 function getSingleBeer(id, callback) {
-  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:3000/api/v1/beers/' + id).end(function (err, res) {
-    console.log(res.body);
+  superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/beers/' + id).end(function (err, res) {
+    // console.log(res.body)
     callback(res.body);
   });
 }
@@ -256,36 +256,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Slider; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/api */ "./client/api/api.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function Slider(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    id: "slider"
-  }, props.beers.map(function (beer) {
-    console.log(beer);
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "radio",
-      name: "slider",
-      id: "s".concat(beer.id)
-    }));
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "s1",
-    id: "slide1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "s2",
-    id: "slide2"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "s3",
-    id: "slide3"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "s4",
-    id: "slide4"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    "for": "s5",
-    id: "slide5"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "beerdetails"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Name: ", props.beers[2] && props.beers[2].name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Rating: ", props.beers[2] && props.beers[2].rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Description: ", props.beers[2] && props.beers[2].descript)));
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var NZLager = {
+  abv: 4,
+  brewery_id: 2,
+  descript: "The under-appreciated canterbury cousin of speights. Drunk in vigourous quantities at Lincoln Uni student parties before acts of valor, such as running into fences, cow tipping, and running into cows. The lords of Valhalla would approve.",
+  id: 5,
+  loc_available: "[1]",
+  name: "Ranfurly",
+  rating: 1,
+  style: "beer",
+  url: "images/Ranfurly.jpeg"
+};
+
+var Slider =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Slider, _React$Component);
+
+  function Slider(props) {
+    var _this;
+
+    _classCallCheck(this, Slider);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Slider).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "update", function (e) {
+      var id = e.target.id[1];
+      console.log('woo!', id);
+      Object(_api_api__WEBPACK_IMPORTED_MODULE_1__["getSingleBeer"])(id, function (beer) {
+        return _this.setState({
+          beer: beer
+        });
+      });
+    });
+
+    _this.state = {
+      beer: NZLager
+    };
+    return _this;
+  }
+
+  _createClass(Slider, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        id: "slider"
+      }, this.props.beers.map(function (beer, i) {
+        // console.log(beer)
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          onChange: _this2.update,
+          type: "radio",
+          name: "slider",
+          key: i,
+          id: "s".concat(beer.id)
+        }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s1",
+        id: "slide1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s2",
+        id: "slide2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s3",
+        id: "slide3"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s4",
+        id: "slide4"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "s5",
+        id: "slide5"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "beerdetails"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Name: ", this.state.beer.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Rating: ", this.state.beer.rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Description: ", this.state.beer.descript)));
+    }
+  }]);
+
+  return Slider;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -306,7 +380,7 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-facebook-square"
+    className: "fab fa-facebook-square"
   })));
 };
 
@@ -331,7 +405,7 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-instagram"
+    className: "fab fa-instagram"
   })));
 };
 
@@ -356,7 +430,7 @@ var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-twitter"
+    className: "fab fa-twitter"
   })));
 };
 
