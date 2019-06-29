@@ -113,7 +113,23 @@
   }
       
   #slide5 { 
+    background-image: url('/images/Ranfurly.jpeg');
+    background-size: contain; 
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  #slide6 { 
     background-image: url('/images/NZLager.jpeg');
+    background-size: contain; 
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  #slide7 { 
+    background-image: url('/images/Rheineck.jpeg');
     background-size: contain; 
     background-color: white;
     background-repeat: no-repeat;
@@ -145,7 +161,7 @@
 
   .beerdetails {
     width: 60%;
-    height: 400px;
+    height: auto;
     border: 2px solid;
     border-radius: 10px;
     margin: auto;

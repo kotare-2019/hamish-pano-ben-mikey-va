@@ -2,23 +2,13 @@ import React from 'react'
 
 import { getSingleBeer } from '../api/api'
 
-const NZLager = {
-  abv: 4,
-  brewery_id: 2,
-  descript: "The under-appreciated canterbury cousin of speights. Drunk in vigourous quantities at Lincoln Uni student parties before acts of valor, such as running into fences, cow tipping, and running into cows. The lords of Valhalla would approve.",
-  id: 5,
-  loc_available: "[1]",
-  name: "Ranfurly",
-  rating: 1,
-  style: "beer",
-  url: "images/Ranfurly.jpeg"
-}
+const DoubleBrown = { id: 1, brewery_id: 1, name: 'Double Brown', style: 'beer', abv: 4, descript: 'Slithers deliciously down the throat when drinken via a puncture in the side of the can - refered to as a shotgun or torpedo. Go for the 440ml can for a double barrel shotgun. Almost indistinguisable from Tui, but without the stigma of the sexist yeah right adverts. ', rating: 1, loc_available: '[1]', url: 'images/DoubleBrown.jpeg' }
 
 export default class Slider extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      beer: NZLager
+      beer: DoubleBrown
     }
   }
 
@@ -42,6 +32,8 @@ export default class Slider extends React.Component {
           <label htmlFor="s3" id="slide3"></label>
           <label htmlFor="s4" id="slide4"></label>
           <label htmlFor="s5" id="slide5"></label>
+          <label htmlFor="s6" id="slide6"></label>
+          <label htmlFor="s7" id="slide7"></label>
         </section>
         <div className="beerdetails">
           <p>Name: {this.state.beer.name}</p>
